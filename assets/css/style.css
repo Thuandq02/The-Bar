@@ -1,0 +1,440 @@
+/* Reset CSS*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* cuộn trang web */
+    scroll-behavior: smooth;
+
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết
+*/
+
+/* 
+1. vị trí
+2. kích thước
+3. màu sắc
+4. kiểu dáng (kiểu chữ, hình tròn, hình vuông, ...)
+*/
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+.col-third {
+    width: 33.3333%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+
+/* main */
+
+#main {
+
+}
+
+#header {
+    height: 46px;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav {
+    display: inline-block;
+}
+
+#nav, .subnav {
+    list-style: none;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+
+#nav li{
+    position: relative;
+}
+
+#nav > li > a{
+    color: #fff;
+} 
+
+#nav li a{
+    /* text-decoration: none; bỏ dấu gạch chân của thẻ a */
+    text-decoration: none; 
+    line-height: 46px;
+    padding: 0px 24px;
+    display: block;
+
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav li:hover a,
+#nav > li:hover > a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+#nav .subnav a{
+    color: #000;
+    padding: 0 16px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 12px;
+}
+
+#header .mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu,
+#header .search-btn {
+    float: right;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .mobile-menu:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu:hover .menu-icon {
+    color: #000;
+}
+
+#header .menu-icon,
+#header .search-icon {
+    color: #fff;
+    font-size: 23px;
+    line-height: 46px;
+    padding: 0px 20px;
+}
+
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/slider/slider2.jpg') top center / cover no-repeat;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 48px;
+    color: #fff;
+    /* 
+     các cách căn giữa:
+     1. left: 50%;
+        transform: translateX(-50%); 
+     2. width: 100%;
+     3. right: 0;
+        lefght: 0;
+    */
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-heading{
+    margin-bottom: 10px;
+    font-weight: 500px;
+    font-size: 24px;
+}
+
+#slider .text-description{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+
+#content {
+
+}
+
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+
+#content .section-heading {
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: 700px;
+    letter-spacing: 4px;
+}
+
+#content .content-item {
+    text-decoration: none;
+}
+
+#content .section-heading,
+#content .section-sub-heading {
+    text-align: center;
+}
+
+#content .section-sub-heading {
+    margin: 15px 0;
+    font-size: 15px;
+    font-style: italic;
+    /* chữ nghiêng */
+    opacity: 0.6;
+}
+
+#content .about-text {
+    margin: 15px 0;
+    font-size: 15px;
+    text-align: justify;
+    /* căn đều chữ 2 bên */
+    line-height: 1.4;
+    /* độ cao của 1 dòng */
+}
+
+#content .member-list {
+    padding: 32px 0;
+    text-align: center;
+
+}
+
+#content .member-name {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+#content .member-img {
+    width: 154px;
+    border-radius: 4px;
+}
+
+#content .member-item {
+    float: left;
+    width: calc(100%/3);
+}
+
+#content .tour-section {
+    background-color: #000;
+}
+
+#content .tickets-list {
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+#content .tickets-list li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+#content .sold-out {
+    padding: 0 8px;
+    margin-left: 16px;
+    background-color: #f44336;
+    color: #fff;
+    font-size: 15px;
+    padding: 3px 4px;
+}
+
+#content .quantity {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    padding: 0 8px;
+    margin-right: 16px;
+}
+
+/* places */
+.place-list {
+    margin: 16px -8px 0;
+    padding-bottom: 48px;
+}
+
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    background-color: #fff;
+    padding: 16px 16px 0;
+}
+
+.place-heading {
+    margin-bottom: 15px;
+}
+
+.place-time {
+    margin: 15px 0;
+}
+
+.place-content {
+    margin: 15px 0;
+}
+
+.place-buy-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.place-buy-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    display: inline-block;
+    margin-bottom: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.contact-content {
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+.contact-infor {
+    font-size: 18px;
+    line-height: 2;
+}
+
+.contact-infor i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 15px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .form-submit-btn {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 10px 16px;
+    float: right;
+}
+
+.contact-form .form-submit-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+/* map */
+.map-section img {
+    width: 100%;
+}
+
+
+/* footer */
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socials-list {
+    font-size: 24px;
+}
+
+#footer .socials-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+#footer .coppyright {
+    margin: 15px 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .coppyright a {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .icon {
+    padding: 8px;
+}
